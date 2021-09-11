@@ -10,7 +10,19 @@ yarn add zx-css
 
 ## Usage
 
-js / ts
+### scss
+
+```scss
+@import "/node_modules/zx-css/src/vars/index";
+// Override the _calc method (重写_calc方法)
+@function _calc($val) {
+  @return calc(1rem / 16 * #{$val});
+}
+
+@import "/node_modules/zx-css/src/index";
+```
+
+### js / ts
 
 ```js
 // css

@@ -1,8 +1,8 @@
 {
   "name": "zx-css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Commonly used css styles",
-  "main": "dist/zx-css.css",
+  "main": "dist/zx-css.min.css",
   "scripts": {
     "build": "sass src/index.scss dist/zx-css.css && sass src/index.scss dist/zx-css.min.css --style compressed",
     "dev": "sass --watch src/index.scss dist/zx-css.css",
