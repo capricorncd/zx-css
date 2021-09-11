@@ -1,0 +1,25 @@
+/**
+ * Created by Capricorncd.
+ * https://github.com/capricorncd
+ * Date: 2021-09-11 13:03 (GMT+0900)
+ */
+@import "../vars/index";
+
+// margin padding -40 -> 50 (20, 25, 30...45, 50)
+@for $i from -8 through 10
+{
+  @if $i <= -4 or $i >= 4 {
+    @include marginAndPadding($i * 5);
+  }
+}
+
+// margin padding -19 -> 19
+@for $i from -19 through 19
+{
+  @if $i != 0 {
+    @include marginAndPadding($i);
+  }
+}
+
+// margin padding 0
+@include marginAndPadding(0);

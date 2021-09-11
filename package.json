@@ -1,0 +1,29 @@
+{
+  "name": "zx-css",
+  "version": "0.0.1",
+  "description": "Commonly used css styles",
+  "main": "dist/zx-css.css",
+  "scripts": {
+    "build": "sass src/index.scss dist/zx-css.css && sass src/index.scss dist/zx-css.min.css --style compressed",
+    "dev": "sass --watch src/index.scss dist/zx-css.css",
+    "help": "sass -h"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capricorncd/zx-css.git"
+  },
+  "keywords": [
+    "scss",
+    "sass",
+    "css"
+  ],
+  "author": "Capricorncd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/capricorncd/zx-css/issues"
+  },
+  "homepage": "https://github.com/capricorncd/zx-css#readme",
+  "devDependencies": {
+    "sass": "^1.39.2"
+  }
+}

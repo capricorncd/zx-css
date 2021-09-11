@@ -1,0 +1,47 @@
+/**
+ * Created by Capricorncd.
+ * https://github.com/capricorncd
+ * Date: 2021-09-09 19:03 (GMT+0900)
+ */
+@import "../vars/index";
+@import "./font-size";
+@import "./offset";
+@import "./position";
+
+// ellipsis
+.ell {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// break-word
+.break-word {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+// white-space
+.wrap {
+  white-space: initial !important;
+}
+
+.nowrap {
+  white-space: nowrap !important;
+}
+
+// bold
+.bold {
+  font-weight: bolder !important;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.pointer {
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

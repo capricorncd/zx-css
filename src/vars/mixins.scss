@@ -1,0 +1,100 @@
+/**
+ * Created by Capricorncd.
+ * https://github.com/capricorncd
+ * Date: 2021-09-11 11:12 (GMT+0900)
+ */
+@import "./functions";
+
+/**
+ * clamp
+ * The -webkit-line-clamp CSS property allows limiting of the contents of a block container to the specified number of lines.
+ * @params $line number
+ */
+@mixin clamp($line: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+/**
+ * border
+ *
+ * @params $position
+ * @params $color
+ * @params $size
+ */
+@mixin border($position, $color, $size: _calc(1)) {
+  $border: border;
+  @if $position {
+    $border: border-#{$position};
+  }
+  $border: $size solid $color !important;
+}
+
+/**
+ * scrollbar
+ * @params $thumbBgColor
+ * @params $trackBgColor
+ * @params $borderColor
+ * @params $borderWidth
+ */
+@mixin scrollbar($thumbBgColor, $trackBgColor, $borderColor, $borderWidth: _calc(1)) {
+  &::-webkit-scrollbar {
+    width: _calc(5);
+    padding: _calc(4);
+  }
+  &::-webkit-scrollbar-track {
+    background: $trackBgColor;
+    border: $borderWidth solid $borderColor;
+    border-radius: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $thumbBgColor;
+    border: $borderWidth solid $borderColor;
+    border-radius: 1px;
+  }
+}
+
+/**
+ * create margin and padding
+ * m margin, p padding
+ * mt margin-top, mr margin-right, mb margin-bottom, ml margin-left
+ * pt padding-top, pr padding-right, pb padding-bottom, pl padding-left
+ *
+ * mh/ph: Horizontal, mv/pv: Vertical
+ * @params $input number
+ */
+@mixin marginAndPadding($input) {
+  $value: _calc($input) !important;
+  .m#{$input} {
+    margin: $value;
+  }
+  .mt#{$input}, .mv#{$input} {
+    margin-top: $value;
+  }
+  .mr#{$input}, .mh#{$input} {
+    margin-right: $value;
+  }
+  .mb#{$input}, .mv#{$input} {
+    margin-bottom: $value;
+  }
+  .ml#{$input}, .mh#{$input} {
+    margin-left: $value;
+  }
+  .p#{$input} {
+    padding: $value;
+  }
+  .pt#{$input}, .pv#{$input} {
+    padding-top: $value;
+  }
+  .pr#{$input}, .ph#{$input} {
+    padding-right: $value;
+  }
+  .pb#{$input}, .pv#{$input} {
+    padding-bottom: $value;
+  }
+  .pl#{$input}, .ph#{$input} {
+    padding-left: $value;
+  }
+}
