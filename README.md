@@ -83,7 +83,7 @@ module.exports = {
             loader: 'style-resources-loader',
             options: {
               // patterns: ['zx-css/src/vars/index.scss'],
-              patterns: ['scss/common/index.scss'],
+              patterns: ['scss/vars/index.scss'],
             },
           }
         ],
