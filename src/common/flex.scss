@@ -3,12 +3,6 @@
  * https://github.com/capricorncd
  * Date: 2021-09-11 13:03 (GMT+0900)
  */
-@import "../vars/index";
-
-// display block
-.block {
-  display: block !important;
-}
 
 // flex
 .flex {
@@ -46,15 +40,3 @@
   flex-wrap: wrap;
 }
 
-// align
-.align-center {
-  text-align: center;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}

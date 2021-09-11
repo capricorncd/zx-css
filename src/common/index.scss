@@ -3,10 +3,27 @@
  * https://github.com/capricorncd
  * Date: 2021-09-09 19:03 (GMT+0900)
  */
-@import "../vars/index";
+@import "./flex";
 @import "./font-size";
 @import "./offset";
-@import "./position";
+
+// align
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+// display block
+.block {
+  display: block !important;
+}
 
 // ellipsis
 .ell {

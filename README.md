@@ -12,14 +12,22 @@ yarn add zx-css
 
 ### scss
 
+scss/vars/index.scss
+
 ```scss
-@import "/node_modules/zx-css/src/vars/index";
+@import "/node_modules/zx-css/src/vars";
 // Override the _calc method (重写_calc方法)
 @function _calc($val) {
   @return calc(1rem / 16 * #{$val});
 }
+```
 
-@import "/node_modules/zx-css/src/index";
+scss/common/index.scss
+
+```scss
+@import "/node_modules/zx-css/src/reset";
+@import "/node_modules/zx-css/src/common";
+// ...
 ```
 
 ### js / ts
@@ -48,7 +56,8 @@ export default defineConfig({
     preprocessorOptions: {
       // Register global variables
       scss: {
-        additionalData: `@import "zx-css/src/vars/index.scss";`
+        // additionalData: `@import "zx-css/src/vars/index.scss";`
+        additionalData: `@import "scss/vars/index.scss";`
       }
     }
   }
@@ -73,7 +82,8 @@ module.exports = {
           {
             loader: 'style-resources-loader',
             options: {
-              patterns: ['zx-css/src/vars/index.scss'],
+              // patterns: ['zx-css/src/vars/index.scss'],
+              patterns: ['scss/common/index.scss'],
             },
           }
         ],
@@ -121,7 +131,7 @@ width: _calc(100);
 
 ## Common CSS
 
-### margin and padding
+### m/p[n] (margin and padding)
 
 `.m-40`, `.m-35`, `.m-30`, `.m-25`, `.m-20`, `.m-19`, `.m-18`, `.m-17`, `....`, `.m0`, `.m1`, `.m2`, `.m3`, `.m4`, `....`, `.m19`, `.m20`, `.m25`, `.m30`, `.m35`, `.m40`, `.m45`, `.m50`
 
@@ -145,7 +155,7 @@ width: _calc(100);
 </div>
 ```
 
-### font-size
+### fs[n] (font-size)
 
 `.fs10`, `.fs12`, `.fs14`, `.fs16`, `....`, `.fs38`, `.fs40`
 
@@ -153,6 +163,119 @@ width: _calc(100);
 <div class="fs20">
   font-size: 20px
 </div>
+```
+
+### ell
+
+```html
+<div class="ell" style="width: 200px">
+  The text-overflow CSS property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis ('…'), or display a custom string.
+</div>
+```
+
+### break-word
+
+<div class="break-word" style="width: 200px">
+  breakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakword.
+</div>
+
+### wrap
+
+<div class="wrap">
+  white-space: initial !important;
+</div>
+
+### nowrap
+
+<div class="nowrap">
+  white-space: nowrap !important;
+</div>
+
+### bold
+
+<div class="bold">
+  font-weight: bolder !important;
+</div>
+
+### justify
+
+<div class="justify">
+  text-align: justify;
+</div>
+
+### pointer
+
+<div class="pointer">
+  cursor: pointer;
+</div>
+
+### block
+
+```scss
+display: block !important;
+```
+
+### flex
+
+```scss
+display: flex;
+align-items: center;
+```
+
+### flex-inline
+
+```scss
+display: inline-flex;
+```
+
+### flex-end
+
+```scss
+@extend .flex;
+justify-content: flex-end !important;
+```
+
+### flex-center
+
+```scss
+@extend .flex;
+justify-content: center !important;
+```
+### flex-column
+
+```scss
+display: flex;
+flex-direction: column;
+```
+### flex-space-between
+
+```scss
+display: flex;
+justify-content: space-between;
+```
+### flex-wrap
+
+```scss
+display: flex;
+flex-wrap: wrap;
+```
+
+### align-center
+
+```scss
+text-align: center;
+```
+
+### align-left
+
+```scss
+text-align: left;
+```
+
+### align-right
+
+```scss
+text-align: right;
 ```
 
 ## Other
