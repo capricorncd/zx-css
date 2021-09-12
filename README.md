@@ -175,33 +175,43 @@ width: _calc(100);
 
 ### break-word
 
+```html
 <div class="break-word" style="width: 200px">
   breakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakword.
 </div>
+```
 
 ### wrap
 
+```html
 <div class="wrap">
   white-space: initial !important;
 </div>
+```
 
 ### nowrap
 
+```html
 <div class="nowrap">
   white-space: nowrap !important;
 </div>
+```
 
 ### bold
 
+```html
 <div class="bold">
   font-weight: bolder !important;
 </div>
+```
 
 ### justify
 
+```html
 <div class="justify">
   text-align: justify;
 </div>
+```
 
 ### pointer
 
