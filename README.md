@@ -215,9 +215,11 @@ width: _calc(100);
 
 ### pointer
 
+```html
 <div class="pointer">
   cursor: pointer;
 </div>
+```
 
 ### block
 
