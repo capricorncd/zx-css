@@ -153,7 +153,7 @@ width: _calc(100);
 
 ```html
 <div class="m20 pv20">
-  margin: 20px, padding-top: 20px, padding-bottom: 20px
+  margin: 20px; padding-top: 20px; padding-bottom: 20px;
 </div>
 
 <div class="mt-20">
@@ -167,7 +167,7 @@ width: _calc(100);
 
 ```html
 <div class="fs20">
-  font-size: 20px
+  font-size: 20px;
 </div>
 ```
 
@@ -238,7 +238,7 @@ display: block !important;
 ```scss
 text-align: center;
 // .flex.center
-justify-content: center
+justify-content: center;
 ```
 
 ### left
@@ -252,7 +252,7 @@ text-align: left;
 ```scss
 text-align: right;
 // .flex.right
-justify-content: flex-end
+justify-content: flex-end;
 ```
 
 ### flex
@@ -276,10 +276,11 @@ display: inline-flex;
 display: flex;
 flex-direction: column;
 ```
-### flex.space-between
+### space-between
 
 ```scss
 display: flex;
+align-items: center;
 justify-content: space-between;
 ```
 ### flex-wrap
