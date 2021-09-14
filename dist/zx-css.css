@@ -89,44 +89,6 @@ ul, ol, li {
 /**
  * Created by Capricorncd.
  * https://github.com/capricorncd
- * Date: 2021-09-11 13:03 (GMT+0900)
- */
-.flex, .flex-end, .flex-center {
-  display: flex;
-  align-items: center;
-}
-
-.flex-inline {
-  display: inline-flex;
-  align-items: center;
-}
-
-.flex-center {
-  justify-content: center !important;
-}
-
-.flex-end {
-  justify-content: flex-end !important;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-.flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/**
- * Created by Capricorncd.
- * https://github.com/capricorncd
  * Date: 2021-09-09 19:03 (GMT+0900)
  */
 .fs10 {
@@ -2238,20 +2200,54 @@ ul, ol, li {
   padding-left: 0 !important;
 }
 
-.align-center {
+/**
+ * Created by Capricorncd.
+ * https://github.com/capricorncd
+ * Date: 2021-09-11 13:03 (GMT+0900)
+ */
+.center {
   text-align: center;
 }
 
-.align-left {
+.left {
   text-align: left;
 }
 
-.align-right {
+.right {
   text-align: right;
 }
 
 .block {
   display: block !important;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex.inline {
+  display: inline-flex;
+}
+.flex.center {
+  justify-content: center !important;
+}
+.flex.right {
+  justify-content: flex-end !important;
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .ell {
@@ -2260,7 +2256,7 @@ ul, ol, li {
   text-overflow: ellipsis;
 }
 
-.break-word {
+.break {
   word-break: break-word;
   overflow-wrap: break-word;
 }

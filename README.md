@@ -179,10 +179,10 @@ width: _calc(100);
 </div>
 ```
 
-### break-word
+### break
 
 ```html
-<div class="break-word" style="width: 200px">
+<div class="break" style="width: 200px">
   breakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakwordbreakword.
 </div>
 ```
@@ -233,6 +233,28 @@ width: _calc(100);
 display: block !important;
 ```
 
+### center
+
+```scss
+text-align: center;
+// .flex.center
+justify-content: center
+```
+
+### left
+
+```scss
+text-align: left;
+```
+
+### right
+
+```scss
+text-align: right;
+// .flex.right
+justify-content: flex-end
+```
+
 ### flex
 
 ```scss
@@ -240,32 +262,21 @@ display: flex;
 align-items: center;
 ```
 
-### flex-inline
+### inline
 
 ```scss
+display: inline;
+// .flex.inline
 display: inline-flex;
 ```
 
-### flex-end
-
-```scss
-@extend .flex;
-justify-content: flex-end !important;
-```
-
-### flex-center
-
-```scss
-@extend .flex;
-justify-content: center !important;
-```
 ### flex-column
 
 ```scss
 display: flex;
 flex-direction: column;
 ```
-### flex-space-between
+### flex.space-between
 
 ```scss
 display: flex;
@@ -276,24 +287,6 @@ justify-content: space-between;
 ```scss
 display: flex;
 flex-wrap: wrap;
-```
-
-### align-center
-
-```scss
-text-align: center;
-```
-
-### align-left
-
-```scss
-text-align: left;
-```
-
-### align-right
-
-```scss
-text-align: right;
 ```
 
 ## Other
