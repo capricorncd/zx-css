@@ -229,65 +229,107 @@ width: _calc(100);
 
 ### block
 
-```scss
-display: block !important;
+```html
+<div class="block">
+  display: block !important;
+</div>
 ```
 
 ### center
 
-```scss
-text-align: center;
-// .flex.center
-justify-content: center;
+```html
+<div class="center">
+  text-align: center;
+</div>
+```
+
+flex center
+
+```html
+<div class="flex center">
+  display: flex;
+  align-items: center;
+  justify-content: center;
+</div>
 ```
 
 ### left
 
-```scss
-text-align: left;
+```html
+<div class="left">
+  text-align: left;
+</div>
 ```
 
 ### right
 
-```scss
-text-align: right;
-// .flex.right
-justify-content: flex-end;
+```html
+<div class="right">
+  text-align: right;
+</div>
+```
+
+flex right
+
+```html
+<div class="flex right">
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+</div>
 ```
 
 ### flex
 
-```scss
-display: flex;
-align-items: center;
+```html
+<div class="flex">
+  display: flex;
+  align-items: center;
+</div>
 ```
 
 ### inline
 
-```scss
-display: inline;
-// .flex.inline
-display: inline-flex;
+```html
+<div class="inline">
+  display: inline;
+</div>
+```
+
+flex inline
+
+```html
+<div class="flex inline">
+  display: inline-flex;
+  align-items: center;
+</div>
 ```
 
 ### flex-column
 
-```scss
-display: flex;
-flex-direction: column;
+```html
+<div class="flex-column">
+  display: flex;
+  flex-direction: column;
+</div>
 ```
 ### space-between
 
-```scss
-display: flex;
-align-items: center;
-justify-content: space-between;
+```html
+<div class="space-between">
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+</div>
 ```
+
 ### flex-wrap
 
-```scss
-display: flex;
-flex-wrap: wrap;
+```html
+<div class="flex-wrap">
+  display: flex;
+  flex-wrap: wrap;
+</div>
 ```
 
 ## Other
