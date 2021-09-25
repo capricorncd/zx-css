@@ -2238,16 +2238,14 @@ ul, ol, li {
 .flex.right {
   justify-content: flex-end !important;
 }
-
-.space-between {
-  display: flex;
-  align-items: center;
+.flex.wrap {
+  flex-wrap: wrap;
+}
+.flex.between {
   justify-content: space-between;
 }
-
-.flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
+.flex.column {
+  flex-direction: column;
 }
 
 .ell {

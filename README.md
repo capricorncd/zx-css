@@ -16,12 +16,27 @@ yarn add zx-css
 
 ## Usage
 
-### scss
+### Default
+
+Import in `.js/.ts` file
+
+```js
+// main.js/ts
+// css
+import 'zx-css'
+// scss
+import 'zx-css/src/index.scss'
+// Import only common scss
+import 'zx-css/src/common/index.scss'
+```
+
+### Custom
 
 scss/vars/index.scss
 
 ```scss
 @import "/node_modules/zx-css/src/vars";
+
 // Override the _calc method (重写_calc方法)
 @function _calc($val) {
   @return calc(1rem / 16 * #{$val});
@@ -36,15 +51,10 @@ scss/common/index.scss
 // ...
 ```
 
-### js / ts
+main.js/ts
 
 ```js
-// css
-import 'zx-css'
-// scss
-import 'zx-css/src/index.scss'
-// Import only common scss
-import 'zx-css/src/common/index.scss'
+import 'scss/common/index.scss'
 ```
 
 ## Register global variables
@@ -70,7 +80,7 @@ export default defineConfig({
 })
 ```
 
-### webpack
+### webpack 5.x
 
 webpack.config.js
 
@@ -86,6 +96,7 @@ module.exports = {
           'css-loader',
           'sass-loader',
           {
+            // https://www.npmjs.com/package/style-resources-loader
             loader: 'style-resources-loader',
             options: {
               // patterns: ['zx-css/src/vars/index.scss'],
@@ -128,10 +139,10 @@ The clamp CSS property allows limiting of the contents of a block container to t
 ```scss
 width: _calc(100);
 
-// use rem, calc(1rem / 16 * #{$val});
+// Use rem to overwrite, calc(1rem / 16 * #{$val});
 // width: calc(1rem / 16 * 100);
 
-// use vw, calc(100vw / 750 * #{$val});
+// Use vw to overwrite, calc(100vw / 750 * #{$val});
 // width: calc(100vw / 750 * 100);
 ```
 
@@ -192,6 +203,14 @@ width: _calc(100);
 ```html
 <div class="wrap">
   white-space: initial !important;
+</div>
+```
+
+flex wrap
+
+```html
+<div class="flex wrap">
+  flex-wrap: wrap;
 </div>
 ```
 
@@ -305,28 +324,27 @@ flex inline
 </div>
 ```
 
-### flex-column
+### flex column
 
 ```html
-<div class="flex-column">
-  display: flex;
+<div class="flex column">
   flex-direction: column;
 </div>
 ```
-### space-between
+### between
 
 ```html
-<div class="space-between">
+<div class="flex between">
   display: flex;
   align-items: center;
   justify-content: space-between;
 </div>
 ```
 
-### flex-wrap
+### flex wrap
 
 ```html
-<div class="flex-wrap">
+<div class="flex wrap">
   display: flex;
   flex-wrap: wrap;
 </div>

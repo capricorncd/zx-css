@@ -1,6 +1,6 @@
 {
   "name": "zx-css",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Commonly used css styles",
   "main": "dist/zx-css.min.css",
   "scripts": {
