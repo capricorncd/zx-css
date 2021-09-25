@@ -331,7 +331,7 @@ flex inline
   flex-direction: column;
 </div>
 ```
-### between
+### flex between
 
 ```html
 <div class="flex between">
